@@ -1,0 +1,15 @@
+{
+  "filename": "unglove1.jpg",
+  "detections": [
+    {
+      "label": "gloves",
+      "confidence": 0.92,
+      "bbox": [
+        32,
+        17,
+        188,
+        224
+      ]
+    }
+  ]
+}
