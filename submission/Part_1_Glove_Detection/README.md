@@ -1,25 +1,22 @@
-# Gloved vs Bare Hand Detection
-
 ## Dataset
-Roboflow Universe – Glove / Hand PPE Dataset
+Public PPE glove detection dataset sourced from Roboflow Universe.
 
-## Model
-YOLOv8n (Ultralytics)
+## Model Used
+YOLOv8 (Ultralytics)
 
 ## Training
-Fine-tuned pretrained YOLOv8n for 20 epochs using labeled glove images.
+The model was fine-tuned on the dataset for 20 epochs using a GPU.
+Images were resized to 640x640.
 
 ## Preprocessing
-Images resized to 640x640. Default YOLO augmentations applied.
+Standard YOLO augmentations such as scaling and flipping were applied.
 
-## Inference
-Images from input_images are processed and annotated outputs are saved to output
-Detection logs are stored as JSON files in logs
+## What Worked
+The model performs well under normal lighting conditions and clear hand visibility.
 
-## Limitations
-Dataset contains only glove annotations; bare hands are treated as background.
+## What Didn’t
+Performance drops for blurred images and partially visible hands.
 
 ## How to Run
-1. Upload images to input_images
-2. Run detection_script.ipynb
-3. Check output and logs
+Place input images in the input_images folder and run:
+python detection_script.ipynb
